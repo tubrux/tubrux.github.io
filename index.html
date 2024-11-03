@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandali Thread-safety Analyzer</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+        }
+        h3 {
+            
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 4em;
+            /* border-bottom: 2px solid #0c1012; */
+            /* padding-bottom: 10px; */
+        }
+        h2 {
+            color: #60c67e;
+            font-size: 3em;
+            /* margin-top: 20px; */
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        strong {
+            color: #60c67e;
+        }
+        code {
+            background-color: #2d2d2d;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #c5c8c6;
+        }
+        pre {
+            background-color: #2d2d2d;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #bdc3c7;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #c5c8c6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #333;
+            border-radius: 10px;
+            padding: 40px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.75em;
+            }
+            h3 {
+                font-size: 1.25em;
+            }
+        }
+
+        .feature-box {
+            background-color: #2d2d2d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            color: #dcdcdc;
+        }
+
+        .feature-box img {
+            width: 90px;
+            /* height: 100px; */
+            margin-right: 50px;
+            margin-left: 40px;
+        }
+
+        .feature-box h3 {
+            font-size: 1.5em;
+            margin: 0;
+            color: #60c67e;
+        }
+
+        .feature-box p {
+            margin: 5px 0 0;
+        }
+
+        /* CSS */
+        .logocontainer {
+            position: relative;
+            width: 100%;
+            height: 50vh; 
+            /* Membuat kontainer setinggi layar */
+        }
+
+        .logocontainer img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <!-- <h1 style="margin-bottom: 0px;">Mandali</h1>
+    <span style="margin-top: -200px;">Thread-safety Analyzer for Java and Kotlin</span> -->
+    <!-- <h2>Thread-safety Analyzer for Java and Kotlin</h2> -->
+
+    <!-- <img width="400px" src="logo.png"/> -->
+
+    <div class="logocontainer">
+        <img width="400" src="logo-removebg-preview.png" alt="Gambar di tengah">
+    </div>
+    
+    
+    <h2>Introduction</h2>
+    <p><strong>Mandali</strong> is a library designed to detect potential thread safety issues within Java or Kotlin classes. The name "Mandali" is inspired by the Indonesian words "Man = Aman" (safe) and "Dali = terkenDali" (controlled), symbolizing safety and easy to control.</p>
+    <p>This library assists in identifying collections that may not be thread-safe in multi-threaded environments, and it automatically detects deadlocks when running. <strong>Note:</strong> This tool does not guarantee thread safety but helps reduce potential thread safety issues.</p>
+
+    <h2>Features</h2>
+
+    
+<div class="feature-box">
+    <img src="logo-item.png" alt="Unsafe Collection Detection Icon">
+    <div>
+        <h3>Unsafe Collection Detection</h3>
+        <p>Mandali can identify commonly unsafe collections in multi-threaded contexts, such as <code>ArrayList</code>, <code>HashMap</code>, and <code>StringBuilder</code>.</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <img src="logo-item.png" alt="Thread-safe Alternatives Recommendation Icon">
+    <div>
+        <h3>Thread-safe Alternatives Recommendation</h3>
+        <p>This feature suggests safer alternatives to replace unsafe collections or objects, enhancing the application's thread safety.</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <img src="logo-item.png" alt="Deadlock Detection Icon">
+    <div>
+        <h3>Deadlock Detection</h3>
+        <p>Mandali automatically detects deadlocks in the system and provides detailed information on locked threads.</p>
+    </div>
+</div>
+<img src="log.png"/>
+
+<h2>Why do we need a Mandali</h2>
+
+<div class="feature-box">
+    <img src="logo-item.png" alt="Early Problem Detection Icon">
+    <div>
+        <h3>Early Problem Detection</h3>
+        <p>Mandali proactively identifies unsafe data collections for multi-threading operations, helping to avoid unpredictable program behavior due to thread safety issues.</p>
+    </div>
+</div>
+<!-- 
+<div class="feature-box">
+    <img src="logo-item.png" alt="Concrete Improvement Suggestions Icon">
+    <div>
+        <h3>Concrete Improvement Suggestions</h3>
+        <p>Mandali provides concrete solution suggestions, such as recommending <code>CopyOnWriteArrayList</code> or <code>Collections.synchronizedList</code> when unsafe usage of <code>ArrayList</code> is detected.</p>
+    </div>
+</div> -->
+
+<div class="feature-box">
+    <img src="logo-item.png" alt="Improved Code Quality Icon">
+    <div>
+        <h3>Improved Code Quality</h3>
+        <p>By using Mandali, you can enhance code quality, making it more stable, reliable, and maintainable.</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <img src="logo-item.png" alt="Development Efficiency Icon">
+    <div>
+        <h3>Development Efficiency</h3>
+        <p>Mandali saves time by automatically detecting issues, allowing developers to focus on business logic instead of debugging concurrency problems.</p>
+    </div>
+</div>
+
+<div class="feature-box">
+    <img src="logo-item.png" alt="Ease of Use Icon" style="margin-bottom: 15%;">
+    <div>
+        <h3>Ease of Use</h3>
+        <h4>Easy Integration</h4>
+        <p>Mandali can be easily integrated into your project by adding it to the project dependencies.</p>
+        
+        <h4>Clear Reporting</h4>
+        <p>The reports generated by Mandali are easy to understand, even for developers not deeply familiar with concurrency concepts.</p>
+        
+        <!-- <h4>Focus on Issues</h4>
+        <p>Mandali is specifically designed to detect thread-safety issues, offering a more specialized tool than general analysis options.</p> -->
+    </div>
+</div>
+
+
+
+    <!-- <h2>Features</h2>
+    <h3>Unsafe Collection Detection</h3>
+    <p>Mandali can identify commonly unsafe collections in multi-threaded contexts, such as <code>ArrayList</code>, <code>HashMap</code>, and <code>StringBuilder</code>.</p>
+
+    <h3>Thread-safe Alternatives Recommendation</h3>
+    <p>This feature suggests safer alternatives to replace unsafe collections or objects, enhancing the application's thread safety.</p>
+
+    <h3>Deadlock Detection</h3>
+    <p>Mandali automatically detects deadlocks in the system and provides detailed information on locked threads.</p>
+
+    <h2>Why do we need a Mandali</h2>
+    <img src="log.png" alt="Mandali Logo" />
+
+    <h3>Early Problem Detection</h3>
+    <p>Mandali proactively identifies unsafe data collections for multi-threading operations, helping to avoid unpredictable program behavior due to thread safety issues.</p>
+
+    <h3>Concrete Improvement Suggestions</h3>
+    <p>Mandali provides concrete solution suggestions, such as recommending <code>CopyOnWriteArrayList</code> or <code>Collections.synchronizedList</code> when unsafe usage of <code>ArrayList</code> is detected.</p>
+
+    <h3>Improved Code Quality</h3>
+    <p>By using Mandali, you can enhance code quality, making it more stable, reliable, and maintainable.</p>
+
+    <h3>Development Efficiency</h3>
+    <p>Mandali saves time by automatically detecting issues, allowing developers to focus on business logic instead of debugging concurrency problems.</p>
+
+    <h3>Ease of Use</h3>
+    <h4>Easy Integration</h4>
+    <p>Mandali can be easily integrated into your project by adding it to the project dependencies.</p>
+    
+    <h4>Clear Reporting</h4>
+    <p>The reports generated by Mandali are easy to understand, even for developers not deeply familiar with concurrency concepts.</p>
+
+    <h4>Focus on Issues</h4>
+    <p>Mandali is specifically designed to detect thread-safety issues, offering a more specialized tool than general analysis options.</p> -->
+
+    <h2>Installation</h2>
+    <p>To use Mandali, add it to your project using either Gradle or Maven.</p>
+    
+    <h3>Using Gradle</h3>
+    <pre><code>repositories {
+    maven { url 'https://repo.repsy.io/mvn/hangga/repo' }
+}
+
+dependencies {
+    implementation 'io.mandali:mandali:1.0.8-SNAPSHOT'
+}</code></pre>
+
+    <h3>Using Maven</h3>
+    <pre><code>&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;Mandali-repo&lt;/id&gt;
+        &lt;url&gt;https://repo.repsy.io/mvn/hangga/repo&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;io.mandali&lt;/groupId&gt;
+        &lt;artifactId&gt;mandali&lt;/artifactId&gt;
+        &lt;version&gt;1.0.8-SNAPSHOT&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+
+    <h2>Basic Usage</h2>
+    <p>To start the Mandali analysis, simply create an instance of <code>Mandali</code> and call <code>start()</code> on it:</p>
+    <pre><code>Mandali(this).start()</code></pre>
+    <p>This command initiates the thread safety analysis on the current instance, inspecting potential issues such as deadlocks or thread-unsafe usage patterns. Typically, this method is used within a test class after each test case to verify the code's thread safety.</p>
+
+    <h2>Annotation Usage: <code>@RunMandali</code></h2>
+    <p>The <code>@RunMandali</code> annotation provides an automated way to activate the Mandali analysis. This annotation should be applied at the class level of a test to trigger the analysis based on the specified options:</p>
+    
+    <pre><code>// Add annotation here
+@RunMandali(showDate = true, detectDeadlock = true)
+class MandaliExampleUnitTest {
+    // Test cases
+}</code></pre>
+
+    <h3><code>boolean showDate</code></h3>
+    <p>A <code>Boolean</code> parameter that, when set to <code>true</code>, displays the date and time of the analysis run in the output. <em>Default value: <code>false</code></em>.</p>
+
+    <h3><code>boolean detectDeadlock</code></h3>
+    <p>A <code>Boolean</code> parameter that enables deadlock detection, with <code>false</code> as the default value.</p>
+
+    <!-- <h3>Example of Applying <code>@RunMandali</code> Annotation</h3> -->
+    
+
+    <h2>Example Test Class</h2>
+    <p>The following example demonstrates how to structure a test class to check for thread safety issues using the <code>Mandali</code> library. This class simulates potential deadlocks and thread-unsafe scenarios, which are detected and analyzed by Mandali.</p>
+
+    <h3>Code Example</h3>
+    <pre><code>package io.mandali.example
+
+import io.mandali.Mandali
+import io.mandali.RunMandali
+import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.Test
+import java.lang.Thread.sleep
+import kotlin.concurrent.thread
+
+@RunMandali(showDate = true, detectDeadlock = true)
+class MandaliExampleUnitTest {
+    private val resource1 = Any()
+    private val resource2 = Any()
+
+    @Test
+    fun `test for deadlock`() {
+        val thread1 = thread {
+            synchronized(resource1) {
+                sleep(100)
+                synchronized(resource2) { println("Thread 1 acquired both resources") }
+            }
+        }
+
+        val thread2 = thread {
+            synchronized(resource2) {
+                sleep(100)
+                synchronized(resource1) { println("Thread 2 acquired both resources") }
+            }
+        }
+
+        thread1.join()
+        thread2.join()
+    }
+
+    @AfterEach
+    fun analyze() {
+        Mandali(this).start()
+    }
+}</code></pre>
+</div>
+</body>
+</html>
