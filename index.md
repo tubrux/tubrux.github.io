@@ -217,8 +217,6 @@ The name **Mandali** is inspired by the Indonesian words "Man = Aman" (safe) and
 
 ## License
 
-Here's the improved version:
-
 Mandali is a proprietary, closed-source library with restrictions on redistribution and modification.
 
 It is free to use, but if you find it valuable, you are welcome to make a donation or become a sponsor. For more information, please contact our development team.
