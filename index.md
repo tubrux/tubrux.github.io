@@ -131,6 +131,10 @@ class MandaliExampleUnitTest {
 }
 ```
 
+## Attention, please
+
+It is important to note that this library is very useful for the development stage. But because Mandali works by checking each line of code, it is **not recommended for the production stage**.
+
 ## Example Test Class
 The following example demonstrates how to structure a test class to check for thread safety issues using the Mandali library. This class simulates potential deadlocks and thread-unsafe scenarios, which are detected and analyzed by Mandali.
 
