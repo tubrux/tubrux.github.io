@@ -103,7 +103,7 @@ dependencies {
 
 ## Basic Usage
 To start the Mandali analysis, simply create an instance of Mandali and call start() on it:
-```Kotlin
+```Java
 Mandali(this).start()
 ```
 
@@ -119,7 +119,7 @@ This annotation should be applied at the class level of a test to trigger the an
 
 Yes, just this simple approach:
 
-```Kotlin
+```Java
 @RunMandali(showDate = true, detectDeadlock = true)
 class MandaliExampleUnitTest {
     @Test
@@ -134,7 +134,7 @@ class MandaliExampleUnitTest {
 ## Example Test Class
 The following example demonstrates how to structure a test class to check for thread safety issues using the Mandali library. This class simulates potential deadlocks and thread-unsafe scenarios, which are detected and analyzed by Mandali.
 
-```Kotlin
+```Java
 package io.mandali
 
 import org.junit.jupiter.api.Test
