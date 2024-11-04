@@ -81,7 +81,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.mandali:mandali:1.0.6-SNAPSHOT'
+    implementation 'io.mandali:mandali:1.0.10-SNAPSHOT'
 }
 ```
 ### In Maven
@@ -97,7 +97,7 @@ dependencies {
     <dependency>
         <groupId>io.mandali</groupId>
         <artifactId>mandali</artifactId>
-        <version>1.0.6-SNAPSHOT</version>
+        <version>1.0.10-SNAPSHOT</version>
     </dependency>
 </dependencies>
 ```
