@@ -23,9 +23,9 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 ### Header 3 -->
 <!-- <img width="100%" src="https://github.com/mandalijvm/mandalijvm.github.io/blob/main/log.png?raw=true"/> -->
 
-**Mandali** is a library designed to detect potential thread-safety issues within Java/Kotlin classes. 
+**Mandali** is an innovative library crafted to proactively detect and address potential thread-safety issues in Java and Kotlin classes.
 
-This library helps identify the use of collections that may not be thread-safe in multi-threaded environments and automatically detects deadlocks when running.
+With **Mandali**, we can effortlessly identify non-thread-safe data structures that may jeopardize your application's stability in multi-threaded environments. Beyond that, it offers seamless deadlock detection, ensuring smooth and reliable performance during runtime. Elevate your code's safety and reliability with Mandali’s smart, automated solutions.
 
 
 <!-- Features
@@ -102,7 +102,7 @@ dependencies {
 ```
 
 ## Basic Usage
-To start the Mandali analysis, simply create an instance of Mandali and call start() on it:
+To start the Mandali analysis, simply create an instance of Mandali and call `start()` on it:
 ```Java
 Mandali(this).start()
 ```
