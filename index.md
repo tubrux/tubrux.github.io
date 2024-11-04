@@ -117,6 +117,8 @@ This annotation should be applied at the class level of a test to trigger the an
 | detectDeadlock | A Boolean parameter that enables deadlock detection|boolean   | false    |
 
 
+Yes, just this simple approach:
+
 ```Kotlin
 @RunMandali(showDate = true, detectDeadlock = true)
 class MandaliExampleUnitTest {
