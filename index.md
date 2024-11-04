@@ -22,7 +22,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 ### Header 3 -->
 
-# Mandali - ThreadSafetyAnalyzer
+<img width="500" src="https://github.com/mandalijvm/mandalijvm.github.io/blob/main/log.png?raw=true"/>
 
 **Mandali** is a Java library designed to detect potential thread safety issues within Java classes. 
 
@@ -75,7 +75,7 @@ To start the Mandali analysis, simply create an instance of Mandali and call sta
 Mandali(this).start()
 ```
 
-## Annotation Usage: `@RunMandali`
+## Annotation Usage: @RunMandali
 This annotation should be applied at the class level of a test to trigger the analysis based on the specified options:
 ```Kotlin
 // Add annotation here
@@ -85,11 +85,10 @@ class MandaliExampleUnitTest {
 }
 ```
 
-`boolean showDate`
-A Boolean parameter that, when set to true, displays the date and time of the analysis run in the output. Default value: false.
-
-`boolean detectDeadlock`
-A Boolean parameter that enables deadlock detection, with false as the default value.
+| Param          |descriptions| type              | default |
+|:---------------|:---------------|:------------------|:--------|
+| showDate       | A Boolean parameter that, when set to true, displays the date and time of the analysis run in the output.| boolean | true    |
+| detectDeadlock | A Boolean parameter that enables deadlock detection|boolean   | false    |
 
 ## Example Test Class
 The following example demonstrates how to structure a test class to check for thread safety issues using the Mandali library. This class simulates potential deadlocks and thread-unsafe scenarios, which are detected and analyzed by Mandali.
