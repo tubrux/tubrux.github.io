@@ -22,7 +22,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 ### Header 3 -->
 
-<img width="500" src="https://github.com/mandalijvm/mandalijvm.github.io/blob/main/log.png?raw=true"/>
+<img width="100%" src="https://github.com/mandalijvm/mandalijvm.github.io/blob/main/log.png?raw=true"/>
 
 **Mandali** is a Java library designed to detect potential thread safety issues within Java classes. 
 
