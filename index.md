@@ -22,6 +22,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 ### Header 3 -->
 **Mandali** is a Java library designed to detect potential thread safety issues within Java classes. 
+
 <img width="100%" src="https://github.com/mandalijvm/mandalijvm.github.io/blob/main/log.png?raw=true"/>
 
 This library helps identify the use of collections that may not be thread-safe in multi-threaded environments and automatically detects deadlocks when running.
@@ -30,19 +31,13 @@ This library helps identify the use of collections that may not be thread-safe i
 Features
 --------
 
-![Unsafe Collection Detection Icon](logo-item.png)
-
 ### Unsafe Collection Detection
 
 Mandali can identify commonly unsafe collections in multi-threaded contexts, such as `ArrayList`, `HashMap`, and `StringBuilder`.
 
-![Thread-safe Alternatives Recommendation Icon](logo-item.png)
-
 ### Thread-safe Alternatives Recommendation
 
 This feature suggests safer alternatives to replace unsafe collections or objects, enhancing the application's thread safety.
-
-![Deadlock Detection Icon](logo-item.png)
 
 ### Deadlock Detection
 
@@ -51,25 +46,17 @@ Mandali automatically detects deadlocks in the system and provides detailed info
 Why do we need a Mandali
 ------------------------
 
-![Early Problem Detection Icon](logo-item.png)
-
 ### Early Problem Detection
 
 Mandali proactively identifies unsafe data collections for multi-threading operations, helping to avoid unpredictable program behavior due to thread safety issues.
-
-![Improved Code Quality Icon](logo-item.png)
 
 ### Improved Code Quality
 
 By using Mandali, you can enhance code quality, making it more stable, reliable, and maintainable.
 
-![Development Efficiency Icon](logo-item.png)
-
 ### Development Efficiency
 
 Mandali saves time by automatically detecting issues, allowing developers to focus on business logic instead of debugging concurrency problems.
-
-![Ease of Use Icon](logo-item.png)
 
 Note: **This is not to guarantee thread safety. It just helps reduce potential thread safety issues**.
 
@@ -123,6 +110,14 @@ Mandali(this).start()
 
 ## Annotation Usage: @RunMandali
 This annotation should be applied at the class level of a test to trigger the analysis based on the specified options:
+
+
+| Param          |descriptions| type              | default |
+|:---------------|:---------------|:------------------|:--------|
+| showDate       | A Boolean parameter that, when set to true, displays the date and time of the analysis run in the output.| boolean | true    |
+| detectDeadlock | A Boolean parameter that enables deadlock detection|boolean   | false    |
+
+
 ```Kotlin
 // Add annotation here
 @RunMandali(showDate = true, detectDeadlock = true)
@@ -130,11 +125,6 @@ class MandaliExampleUnitTest {
     // Test cases
 }
 ```
-
-| Param          |descriptions| type              | default |
-|:---------------|:---------------|:------------------|:--------|
-| showDate       | A Boolean parameter that, when set to true, displays the date and time of the analysis run in the output.| boolean | true    |
-| detectDeadlock | A Boolean parameter that enables deadlock detection|boolean   | false    |
 
 ## Example Test Class
 The following example demonstrates how to structure a test class to check for thread safety issues using the Mandali library. This class simulates potential deadlocks and thread-unsafe scenarios, which are detected and analyzed by Mandali.
