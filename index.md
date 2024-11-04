@@ -21,7 +21,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 > When something is important enough, you do it even if the odds are not in your favor.
 
 ### Header 3 -->
-**Mandali** is a Java library designed to detect potential thread safety issues within Java classes. 
+**Mandali** is a library designed to detect potential thread-safety issues within Java/Kotlin classes. 
 
 <img width="100%" src="https://github.com/mandalijvm/mandalijvm.github.io/blob/main/log.png?raw=true"/>
 
