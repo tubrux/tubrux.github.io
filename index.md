@@ -70,7 +70,6 @@ Why do we need a Mandali
 
 Note: **This is not to guarantee thread safety. It just helps reduce potential thread safety issues**.
 
-The name **Mandali** is inspired by the Indonesian words "Man = Aman" (safe) and "Dali = terkenDali" (controlled), symbolizing **safety under control**. 
 
 ## Installation
 ### In Gradle
@@ -207,6 +206,10 @@ class MandaliExampleKotlinUnitTest {
     }
 }
 ```
+
+## About
+
+The name **Mandali** is inspired by the Indonesian words "Man = Aman" (safe) and "Dali = terkenDali" (controlled), symbolizing **safety under control**. 
 
 ## License
 
