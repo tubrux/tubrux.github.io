@@ -3,3 +3,7 @@ description: Thread Safety Analyzer for Java/Kotlin.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
+
+baseurl: ""
+url: "https://mandalijvm.github.io"
+permalink: pretty
