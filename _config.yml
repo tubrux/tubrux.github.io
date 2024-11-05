@@ -1,12 +1,12 @@
 title: Mandali | Blog
-description: Talking About Kotlin and Java
-show_downloads: true
+description: Talking About Kotlin and Java with Mandali
+# show_downloads: true
 
 baseurl: "/blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
 url: "https://mandalijvm.github.io/" # change this to the base hostname & protocol for your site
 
 
-google_analytics:
+# google_analytics:
 
 # cayman-blog date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -16,10 +16,10 @@ cayman-blog:
 theme: # leave it empty
 
 # social
-author: lorepirri
-image: /thumbnail-jumbo.png
-twitter:
-  username: lorepirri
+author: Hangga Aji Sayekti
+image: /unnamed.jpg
+# twitter:
+#   username: hangga
 
 plugins:
   - jekyll-target-blank
@@ -27,4 +27,4 @@ plugins:
 target-blank:
     rel: nofollow
 
-header_page_refs: ['now', 'about', 'contact']
+header_page_refs: ['about', 'contact']
