@@ -4,11 +4,12 @@
     {% assign default_refs = site.pages | sort:"order" | map: "ref" %}
     {% assign page_refs = site.header_page_refs | default: default_refs %}
 
-    <a class="site-title" href="https://mandalijvm.github.io">Mandali</a>
+    
 
     {% if page.layout != 'home' %}
       <a class="site-title" href="{{ "/" | absolute_url }}">{{ site.title | escape }}</a>
     {% endif %}
+    <a class="site-title" href="https://mandalijvm.github.io">Mandali</a>
 
     {% if page_refs %}
       <nav class="site-nav">
