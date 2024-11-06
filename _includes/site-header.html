@@ -1,13 +1,13 @@
 <header class="site-header" role="banner">
 
   <div class="wrapper">
+    <a class="site-title" href="https://mandalijvm.github.io">Mandali | </a>
+
     {% assign default_refs = site.pages | sort:"order" | map: "ref" %}
     {% assign page_refs = site.header_page_refs | default: default_refs %}
 
-    
-
     {% if page.layout != 'home' %}
-      <a class="site-title" href="https://mandalijvm.github.io">Mandali | </a>
+      
       <a class="site-title" href="{{ "/" | absolute_url }}">{{ site.title | escape }}</a>
       
     {% endif %}
