@@ -1,9 +1,9 @@
-title: Mandali
+title: Tubrux
 description: Thread Safety Analyzer for Java/Kotlin.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
 
 baseurl: ""
-url: "https://mandalijvm.github.io"
+url: "https://tubrux.github.io"
 permalink: pretty
