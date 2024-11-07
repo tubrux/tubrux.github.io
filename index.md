@@ -80,7 +80,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.tubrux:tubrux:1.0.10-SNAPSHOT'
+    implementation 'io.tubrux:tubrux:0.0.1-SNAPSHOT'
 }
 ```
 ### In Maven
@@ -96,7 +96,7 @@ dependencies {
     <dependency>
         <groupId>io.tubrux</groupId>
         <artifactId>tubrux</artifactId>
-        <version>1.0.10-SNAPSHOT</version>
+        <version>0.0.1-SNAPSHOT</version>
     </dependency>
 </dependencies>
 ```
