@@ -219,9 +219,9 @@ class tubruxExampleKotlinUnitTest {
 }
 ``` -->
 
-## About
+<!-- ## About
 
-The name **Tubrux** is inspired by the Indonesian words "Man = Aman" (safe) and "Dali = terkenDali" (controlled), symbolizing **safety under control**. 
+The name **Tubrux** is inspired by the Indonesian words "Man = Aman" (safe) and "Dali = terkenDali" (controlled), symbolizing **safety under control**.  -->
 
 ## License
 
