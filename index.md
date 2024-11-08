@@ -102,11 +102,24 @@ dependencies {
 ```
 
 ## Basic Usage
-To start the tubrux analysis, simply create an instance of tubrux and call `start()` on it:
+To start the tubrux analysis, simply create an instance of Tubrux and call `scan()` on it:
+In Java
 ```Java
-tubrux(this).start()
+new Tubrux()
+    .setShowDate(true)
+    .setDetectSensitiveData(true)
+    .scan();
+```
+In Kotlin
+```Kotlin
+Tubrux()
+    .setShowDate(true)
+    .setDetectSensitiveData(true)
+    .scan()
 ```
 
+## Example of Usage in Test Unit coming soon 😊
+<!-- 
 ## Annotation Usage: @TubruxRun
 This annotation should be applied at the class level of a test to trigger the analysis based on the specified options:
 
@@ -129,7 +142,7 @@ class tubruxExampleUnitTest {
         tubrux(this).start()
     }
 }
-```
+``` -->
 
 ## Attention, please
 
