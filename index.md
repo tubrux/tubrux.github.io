@@ -25,7 +25,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 **Tubrux** is an innovative library crafted to proactively detect and address potential thread-safety issues in Java and Kotlin classes.
 
-With **Tubrux**, we can effortlessly identify non-thread-safe data structures that may jeopardize your application's stability in multi-threaded environments. Beyond that, it offers seamless deadlock detection, ensuring smooth and reliable performance during runtime. Elevate your code's safety and reliability with tubrux’s smart, automated solutions.
+With **Tubrux**, we can effortlessly identify non-thread-safe data structures that may jeopardize your application's stability in multi-threaded environments. Beyond that, it offers seamless deadlock detection, ensuring smooth and reliable performance during runtime. Elevate your code's safety and reliability with **Tubrux**’s smart, automated solutions.
 
 
 <!-- Features
@@ -102,7 +102,7 @@ dependencies {
 ```
 
 ## Basic Usage
-To start the Tubrux analysis, simply create an instance of Tubrux and call `scan()` on it:
+To start the **Tubrux** analysis, simply create an instance of **Tubrux** and call `scan()` on it:
 ### In Java
 ```Java
 new Tubrux()
@@ -238,6 +238,6 @@ The name **Tubrux** is inspired by the Indonesian words "Man = Aman" (safe) and 
 
 ## License
 
-tubrux is a proprietary, closed-source library with restrictions on redistribution and modification.
+**Tubrux** is a proprietary, closed-source library with restrictions on redistribution and modification.
 
 It is free to use, but if you find it valuable, you are welcome to make a donation or become a sponsor. For more information, please contact our development team.
