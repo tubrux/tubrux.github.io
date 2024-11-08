@@ -102,15 +102,15 @@ dependencies {
 ```
 
 ## Basic Usage
-To start the tubrux analysis, simply create an instance of Tubrux and call `scan()` on it:
-In Java
+To start the Tubrux analysis, simply create an instance of Tubrux and call `scan()` on it:
+### In Java
 ```Java
 new Tubrux()
     .setShowDate(true)
     .setDetectSensitiveData(true)
     .scan();
 ```
-In Kotlin
+### In Kotlin
 ```Kotlin
 Tubrux()
     .setShowDate(true)
