@@ -104,14 +104,14 @@ dependencies {
 ## Basic Usage
 To start the **Tubrux** analysis, simply create an instance of **Tubrux** and call `scan()` on it:
 ### In Java
-```Java
+```java
 new Tubrux()
     .setShowDate(true)
     .setDetectSensitiveData(true)
     .scan();
 ```
 ### In Kotlin
-```Kotlin
+```java
 Tubrux()
     .setShowDate(true)
     .setDetectSensitiveData(true)
