@@ -118,7 +118,7 @@ Tubrux()
     .scan()
 ```
 
-## Example of Usage in Test Unit coming soon 😊
+<!-- ## Example of Usage in Test Unit coming soon 😊 -->
 <!-- 
 ## Annotation Usage: @TubruxRun
 This annotation should be applied at the class level of a test to trigger the analysis based on the specified options:
