@@ -118,37 +118,16 @@ Tubrux()
     .scan()
 ```
 
-<!-- ## Example of Usage in Test Unit coming soon 😊 -->
-<!-- 
-## Annotation Usage: @TubruxRun
-This annotation should be applied at the class level of a test to trigger the analysis based on the specified options:
+## Sample Report
 
+ <img width="70%" src="https://raw.githubusercontent.com/tubrux/tubrux.github.io/refs/heads/tubrux/log-tubrux.webp"/>
 
-| Param          |descriptions| type              | default |
-|:---------------|:---------------|:------------------|:--------|
-| showDate       | A Boolean parameter that, when set to true, displays the date and time of the analysis run in the output.| boolean | true    |
-| detectDeadlock | A Boolean parameter that enables deadlock detection|boolean   | false    |
-
-
-Yes, just this simple approach:
-
-```Java
-@Runtubrux(showDate = true, detectDeadlock = true)
-class tubruxExampleUnitTest {
-    @Test
-    fun `some test example`() {
-        //...
-
-        tubrux(this).start()
-    }
-}
-``` -->
 
 ## Attention, please
 
 It is important to note that this library is very useful for the development stage. But because tubrux works by checking each line of code, it is **not recommended for the production stage**.
-
-<a target="_blank" href="https://github.com/tubrux/example" class="paypal-button">Complete Example</a>
+<!-- 
+<a target="_blank" href="https://github.com/tubrux/example" class="paypal-button">Complete Example</a> -->
 
 <!-- ## Example Test Class
 The following example demonstrates how to structure a test class to check for thread safety issues using the tubrux library. This class simulates potential deadlocks and thread-unsafe scenarios, which are detected and analyzed by tubrux.
