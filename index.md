@@ -120,7 +120,9 @@ Tubrux()
 
 ## Sample Report
 
- <img width="70%" src="https://raw.githubusercontent.com/tubrux/tubrux.github.io/refs/heads/tubrux/log-tubrux.webp"/>
+The output from the analysis will show detailed reports about the potential vulnerabilities detected in your code. Here’s an example of what the output might look like:
+
+ <img width="100%" src="https://raw.githubusercontent.com/tubrux/tubrux.github.io/refs/heads/tubrux/log-tubrux.webp"/>
 
 
 ## Attention, please
