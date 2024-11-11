@@ -1,0 +1,18 @@
+{
+    "lib": {
+      "name": "Tubrux",
+      "latest_version": "0.0.2",
+      "release_date": "2024-11-10",
+      "changelog": [
+        {
+          "version": "0.0.2",
+          "description": "Peningkatan performa dan perbaikan bug kecil."
+        },
+        {
+          "version": "0.0.1",
+          "description": "Rilis pertama aplikasi."
+        }
+      ]
+    }
+  }
+  
