@@ -80,7 +80,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.tubrux:tubrux:0.0.2'
+    implementation 'io.tubrux:tubrux:0.0.3-SNAPSHOT'
 }
 ```
 ### In Maven
@@ -96,7 +96,7 @@ dependencies {
     <dependency>
         <groupId>io.tubrux</groupId>
         <artifactId>tubrux</artifactId>
-        <version>0.0.2</version>
+        <version>0.0.3-SNAPSHOT</version>
     </dependency>
 </dependencies>
 ```
@@ -218,8 +218,12 @@ class tubruxExampleKotlinUnitTest {
 
 The name **Tubrux** is inspired by the Indonesian words "Man = Aman" (safe) and "Dali = terkenDali" (controlled), symbolizing **safety under control**.  -->
 
+
 ## License
 
 **Tubrux** is a proprietary, closed-source library with restrictions on redistribution and modification.
 
 It is free to use, but if you find it valuable, you are welcome to make a donation or become a sponsor. For more information, please contact our development team.
+
+## Tech Stack
+[![tech](https://skillicons.dev/icons?i=java,kotlin,maven,gradle&theme=dark)](https://tubrux.github.io/)
